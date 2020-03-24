@@ -1,5 +1,8 @@
 package aposto.settings;
 
+import aposto.Main;
+import aposto.render.Camera;
+
 public class MainSettings {
 
 	private static boolean isFpsTitle;
@@ -7,7 +10,6 @@ public class MainSettings {
 	private static boolean logStatus;
 	private static boolean firstRunning;
 	private static boolean awaitThread;
-	private static boolean isResize;
 
 	private static String lastTitles;
 	
@@ -21,10 +23,6 @@ public class MainSettings {
 
 	public static String getPlayerName() {
 		return player_name;
-	}
-	
-	public static void setResizable(boolean is) {
-		isResize = is;
 	}
 
 	public static void setFpsStatsInTitle(boolean status) {
@@ -66,10 +64,6 @@ public class MainSettings {
 	public static boolean isFirstRunning() {
 		return firstRunning;
 	}
-	
-	public static boolean isResizable() {
-		return isResize;
-	}
 
 	public static void setLastTitle(String title) {
 		lastTitles = title;
@@ -85,6 +79,10 @@ public class MainSettings {
 
 	public static float getFrameCap() {
 		return FRAME_CAP;
+	}
+	
+	public static Camera getCamera() {
+		return Main.cam;
 	}
 
 }

@@ -17,7 +17,7 @@ public class Main {
 
 	private static Player player;
 
-	Camera cam;
+	public static Camera cam;
 
 	public Main() {
 		DisplayManager.create(720, 480, "Aposto");
@@ -127,7 +127,7 @@ public class Main {
 				}
 			}
 
-			if (MainSettings.isFirstRunning() && timer == 1000) {
+			if (MainSettings.isFirstRunning()) {
 				System.out.println("[ApostoLog] Succesfuly Start !");
 				InGame.postStart();
 				MainSettings.firstRunning(false);
